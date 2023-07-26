@@ -29,8 +29,10 @@ export const getTrainData = async (setTrains) =>{
     try{
         const res = await sendHttpRequest(getTrainsUrl,`GET`);
         if(res && res.success==true){
-            console.log("got train data!");
-            setTrains(res.data);
+            console.log("got train data!",res.data);
+            let tempTrainData = res.data;
+            tempTrainData = tempTrainData.sort((a,b)=>a.departureTime.Hours - b.departureTime.Hours);
+            setTrains(tempTrainData);
         }
     }catch(err){
         console.log("error",err);

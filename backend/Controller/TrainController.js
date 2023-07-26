@@ -1,4 +1,5 @@
 const trains = require('../Models/Trains.js');
+const lastUpdateds = require('../Models/LastUpdateds');
 
 // api handlers
 // Get all trains 
@@ -234,3 +235,81 @@ exports.deleteTrainById = async (req,res,next) => {
     }
 }
 
+
+
+// last updated tracking
+
+exports.getLastUpdated = async (req,res,next) => {
+    const lastUpdatedId  = req.params.id;
+        // if data not in db:
+        let dataInDB = await lastUpdateds.findById({_id:lastUpdatedId});
+        if(!dataInDB){
+            return res.status(404).json({
+                message : "cannot find document",
+                success : false 
+            })
+        }
+
+    try{
+        const lastUpdatedsData = await lastUpdateds.findById(lastUpdatedId)
+
+
+        if(!lastUpdatedsData){
+            return res.status(400).json({
+                success : false,
+                message: "something went wrong while fetching train!"
+            })
+        }
+        return res.status(200).json({
+            success : true , 
+            data : lastUpdatedsData,
+            count : lastUpdatedsData.length
+        })
+    }catch(err){
+        return res.status(500).json({
+            success : false,
+            message : "Internal server error!" + err,
+        })
+    }
+}
+
+
+// patch trains
+exports.patchLastUpdated = async (req,res,next) => {
+    if(!req.params.id){
+        return res.status(404).json({
+            success : false,
+            message : "enter valid trainID",
+        })
+    }
+
+    const lastUpdatedId = req.params.id;
+    if(req.body.date == null ){
+        return res.status(404).json({
+            success : false,
+            message : "send valid data to patch!"
+        })
+    }
+    const patchableData = {
+        date :  req.body.date 
+    }
+    try{
+        const lastUpdatedsData = await trains.findByIdAndUpdate(lastUpdatedId , { $set: { ...patchableData } }, {new : true});
+        if(!lastUpdatedsData){
+            return res.status(400).json({
+                success : false,
+                message : "something went wrong while patching train!"
+            })
+        }
+        return res.status(200).json({
+            success : true,
+            data : lastUpdatedsData ,
+            count : lastUpdatedsData.length
+        })
+    }catch(err){
+        return res.status(500).json({
+            success : false,
+            message : "Internal server error!",err
+        })
+    }
+}

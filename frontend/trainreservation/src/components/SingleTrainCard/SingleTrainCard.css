@@ -1,6 +1,6 @@
 .singleTrainCardWrapper{
     width: 80vw;
-    height: 22vw;
+    height: 14vw;
     padding: 2vh;
     margin: 1vh;
     display: flex;
@@ -17,13 +17,12 @@
     filter: drop-shadow(1px 5px 4px var(--shadow-color));
 }
 
-
 .trainCardTop{
     font-size: x-large;
     font-weight: 500;
     display: flex;
     width: 80%;
-    margin-left: 5vw;
+    margin-left: 10vw;
     justify-content: space-around;
     border-radius: var(--border-radius);
     background-color: var(--secondary-light-color);
@@ -36,7 +35,7 @@
 
 .trainCardLeft{
     display: flex;
-    width: 50%;
+    width: 40%;
     margin: 1vh;
     margin-left: 4vw;
 }
@@ -57,6 +56,15 @@
     display: flex;
     flex-direction: column;
     
+}
+
+.trainDepartureName,  .trainDelayName{
+    text-align: center;
+}
+
+.trainDelayDisplay , .trainDepartureDisplay{
+    font-size: large;
+    font-weight: 500;
 }
 
 .trainDepartureTime{
@@ -160,4 +168,33 @@
     margin: 1vh;
     border-radius: var(--border-radius);
     background-color: var(--secondary-light-color);
+}
+
+
+@media only screen and (max-width: 700px) {
+    .singleTrainCardWrapper{
+        width: 85vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trainIcon{
+        display: none;
+    }
+
+    .trainCardRight{
+        flex-direction: column;
+        width: max-content;
+    }
+
+    .seatsAvailableName , .priceName{
+        font-size: medium;
+        text-align: center;
+    }
+    .seatsAvailable , .price{
+        width: 40vw;
+        flex-direction: row;
+    }
+
 }

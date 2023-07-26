@@ -23,7 +23,8 @@ function App() {
   },[isConnected])
 
   return ( <>
-      {(!isConnected)?<ConnectingToServer/> : ''}
+
+      {(!isConnected)?"Connecting To Server!" : ''}
       <TopNavComponent siteName={"RSK Central"}/>
       <div className="trainCardsWrapper">
         {

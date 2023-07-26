@@ -1,10 +1,12 @@
 import './SingleTrainCard.css'
 import trainIcon from '../../assets/train-light.svg'
 
+
 function SingleTrainCard({train}) {
 
     return ( <>
-        <div className="singleTrainCardWrapper">
+    
+        <div className="singleTrainCardWrapper" onClick={()=>{if(currentClickedTrain!=null)setCurrentClickedTrain(prev=>{return {isOpen : true, train : train} })}}>
             <div className="trainCardTop">
                 <div className="trainName">
                     {(train && train.trainName)?train.trainName : ''}
@@ -12,6 +14,7 @@ function SingleTrainCard({train}) {
                 <div className="trainNumber">
                   {(train && train.trainNumber)?train.trainNumber : ''}
                 </div>
+
             </div>
             <div className="trainCardBottom">
                 <div className="trainCardLeft">
@@ -96,5 +99,6 @@ function SingleTrainCard({train}) {
 
 
 export default SingleTrainCard;
+
 
 
