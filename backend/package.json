@@ -1,0 +1,21 @@
+{
+  "name": "trainreservationnode",
+  "version": "1.0.0",
+  "description": "backend node app for trainreservation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "G S RENJITH SAMUEL",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.4.1"
+  }
+}
