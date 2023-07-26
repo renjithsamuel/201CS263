@@ -1,8 +1,12 @@
 .singleTrainCardWrapper{
     width: 80vw;
-    height: 30vw;
+    height: 22vw;
     padding: 2vh;
     margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: start;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
 }
@@ -11,4 +15,149 @@
     cursor: pointer;
     background-color: var(--secondary-color);
     filter: drop-shadow(1px 5px 4px var(--shadow-color));
+}
+
+
+.trainCardTop{
+    font-size: x-large;
+    font-weight: 500;
+    display: flex;
+    width: 80%;
+    margin-left: 5vw;
+    justify-content: space-around;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-light-color);
+}
+
+.trainCardBottom{
+    display: flex;
+    width: 100%;
+}
+
+.trainCardLeft{
+    display: flex;
+    width: 50%;
+    margin: 1vh;
+    margin-left: 4vw;
+}
+
+.trainIcon{
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.trainTimings{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.trainDepartureTime{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+
+.trainDelay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.trainCardRight{
+    width: 80%;
+    display: flex;
+}
+
+.seatsAvailableName{
+    font-size: large;
+    font-weight: 600;
+}
+
+.seatsAvailable{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.seatsOverAllDisplay{
+    
+}
+
+.sleeperCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sleeperCountName ,.acCountName {
+    padding:0.5vh ;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-light-color);
+}
+
+.acCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.priceName{
+    font-size: large;
+    font-weight: 600;
+}
+.sleeperPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sleeperPriceName , .acPriceName{
+    padding:0.5vh ;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-light-color);
 }
