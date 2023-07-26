@@ -1,0 +1,14 @@
+.singleTrainCardWrapper{
+    width: 80vw;
+    height: 30vw;
+    padding: 2vh;
+    margin: 1vh;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+}
+
+.singleTrainCardWrapper:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    filter: drop-shadow(1px 5px 4px var(--shadow-color));
+}

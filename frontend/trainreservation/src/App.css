@@ -1,0 +1,28 @@
+:root {
+    --bg-color : #ffffff;
+    --primary-color : #ebebeb;
+    --primary-hover-color : #f6f6f6;
+    --secondary-color : #acacac;
+    --secondary-light-color : #d5d5d5;
+    --hover-color : #b4b4b4;
+    --text-color : #000000;
+    --border-color : #000000;
+    --border-radius : 10px;
+    --shadow-color :  #737373b4;
+    --popup-cover-color : #4d4c4c5e;
+    --cover-color : #ffffff;
+}
+
+
+*{
+    animation: slide-up 0.4s ease-in-out   forwards ;
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+}
+
+.trainCardsWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

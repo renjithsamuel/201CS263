@@ -1,0 +1,26 @@
+.TopNavWrapper{
+    margin: 2vh;
+    padding: 2.5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+}
+
+.SiteName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size:x-large;
+    font-weight: 600;
+}
+
+.siteIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
